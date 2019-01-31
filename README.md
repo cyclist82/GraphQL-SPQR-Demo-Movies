@@ -10,25 +10,24 @@ Here's the GraphQL Schema.
 type Mutation {
   addActorToMovie(actorId: String, movieId: String): Movie
   createActor(name: String): Actor
-}
-
+  }
 type Query {
   findActorByID(id: String): Actor
   allMovies: [Movie]
   allActors: [Actor]
   findMovieByTitleContains(title: String): [Movie]
-}
-
+  }
+  
 type Actor {
   id: String
   movies: [Movie]
   name: String
-}
-
+  }
+  
 type Movie {
   actors: [Actor]
   description: String
   director: String
   id: String
   title: String
-}
+  }
